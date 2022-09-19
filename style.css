@@ -1,0 +1,289 @@
+/*****************  BODY   ****************************/
+
+
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --ff--primary: 'Roboto', sans-serif;
+    --black: #303030;
+
+
+
+    --seach: #06181C;
+    --buttoncolor: #065E7C;
+    --azulmaisclaro: #4A808C;
+    --azulescuro: #092D38;
+    --cinza: #E1E1E6;
+    --branco: #FFFFFF;
+    --red: #F75A68;
+
+    --fundo: rgba(6, 22, 27, 0.5);
+}
+
+body {
+    
+    font-size: 1.6rem;
+    color: var(--black);
+    background-color: #000000;
+    width: 100%;
+
+}
+
+body * {
+    font-family: var(--ff--primary);
+}
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    padding: 2rem;
+}
+
+/*****************  HEADER   ****************************/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    
+    width: 90rem;
+    background-color: var(--primary-color);
+    padding-top: 5rem;
+    padding-bottom: 5.4rem;
+}
+input {
+    background-color: var(--seach);
+    height: 4rem;
+    border-radius: 5px 0 0 5px;
+    width: 30rem;
+    padding: 0 1rem;
+    border: none;
+    color: var(--branco)
+}
+#button-seach {
+    background-color: var(--buttoncolor);
+    color: var(--branco);
+    width: 15rem;
+    height: 4rem;
+    border-radius: 0 5px 5px 0;
+    border: none;
+    }
+
+   
+    #button-seach:hover {
+        background-color: var(--branco);
+        color: var(--buttoncolor);
+        transition: 0.4s all;
+        cursor: pointer;
+    }
+ 
+
+    .estrela {
+        position: absolute;
+        top: 40rem;
+        right: 1100px;
+
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+        
+    }
+    .favorito {
+        position: absolute;
+        top: 43rem;
+        left: 69rem;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        
+    }
+
+    /*****************  TABELA   ****************************/    
+    
+    table {
+        width: 90rem;
+        border-spacing: 0px;
+        border: 1px solid #4A808C;
+        border-radius: 12px;
+    }
+    
+
+    thead {
+        background-color: var(--azulescuro);
+        
+    }
+    
+    th {
+       
+        color: var(--cinza);
+        font-size: 2rem;
+        line-height: 160%;
+        font-weight: normal;
+        padding: 4rem;
+
+
+    }
+
+    table td {
+        text-align: center;
+       height: 7rem;
+       background: rgba(6, 22, 27, 0.5);
+       color: var(--cinza);
+       font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        padding: 1.5rem;
+       
+    }
+    
+    .remover button {
+        color: var(--red);
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 1.6rem;
+        line-height: 160%;
+        background-color: transparent;
+        cursor: pointer;
+        border: none;
+    }
+
+    table th {
+        text-align: left;
+        font-weight: normal;
+        padding: 1rem;
+        color: var(--cinza);
+    }
+    
+    table th:first-child {
+        border-top-left-radius: 1rem;
+    }
+    table th:last-child {
+        border-top-right-radius: 1rem;
+    }
+    .remover {
+        color: var(--red);
+    }
+    tr:nth-child(even) {
+        background-color: var(--seach);
+    }
+
+
+
+
+
+/************* POSICOES DA TABELA ***********/
+
+.Usuário {
+    width: 38rem;
+    padding-left: 2rem;
+
+}
+.Repositories, .Followers, .Ação {
+    width: 10rem;
+    height: 7rem;
+    text-align: center;
+}
+
+
+
+
+
+
+td.user { 
+    position: relative;  
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+td.user img {
+    bottom: 1rem;
+    left: 15px;
+    position: absolute;
+}
+
+td.user p {
+   position: absolute;
+ 
+    left: 90px;
+
+}
+td.user span {
+    position: absolute;
+ 
+    left: 90px;
+    bottom: 18px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+}
+.user img {
+    width: 5rem;
+    height: 5rem;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+
+
+/* CHÁ DE SUMIÇO*/
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+
+.hide {
+    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
