@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    text-decoration: none;
 }
 
 :root {
@@ -61,7 +62,7 @@ header {
 }
 input {
     background-color: var(--seach);
-    height: 4rem;
+    height: 4.15rem;
     border-radius: 5px 0 0 5px;
     width: 30rem;
     padding: 0 1rem;
@@ -78,7 +79,7 @@ input {
     }
 
    
-    #button-seach:hover {
+#button-seach:hover {
         background-color: var(--branco);
         color: var(--buttoncolor);
         transition: 0.4s all;
@@ -86,53 +87,96 @@ input {
     }
  
 
-    .estrela {
-        position: absolute;
-        top: 40rem;
-        right: 1100px;
-
-        text-align: center;
+.star {
+        
+        border: 1px solid #4A808C;
+        height: 40rem;
+        width: 90.1rem;
         display: flex;
         justify-content: center;
-        
-        
-    }
-    .favorito {
-        position: absolute;
-        top: 43rem;
-        left: 69rem;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        
     }
 
-    /*****************  TABELA   ****************************/    
+.star svg  {
+        position: relative;
+        top: 150px;
+    }
+
+.star span {
+        position: relative;
+        top: 190px;
+        left: 30px;
+        font-size: 3rem;
+    }
+
+
+
+
+    
+        /*****************  SCROLL DA TABLE   ********************/   
+    
+
+
+
+
+      
+        ::-webkit-scrollbar {
+            width: 8px;
+            max-height: 19px; 
+
+            
+          }
+
+          ::-webkit-scrollbar-track {
+            margin-top: 10px;
+            margin-bottom: 10px;
+   
+        }
+        
+          ::-webkit-scrollbar-thumb {
+            background: #4A808C;
+            border-right: 4px transparent solid;
+            
+            background-clip: padding-box;
+          }
+
+
+    /*****************  TABELA   ********************/    
     
     table {
+        
+        display: flex;
+        flex-direction: column;
         width: 90rem;
         border-spacing: 0px;
-        border: 1px solid #4A808C;
-        border-radius: 12px;
-    }
+        border-collapse: collapse;
+        border-top-left-radius: 1.2rem;
+        border-top-right-radius: 1.2rem;
+        outline: 1px solid #4A808C;
+
+    }   
     
+    a {
+        text-align: start;
+        color: #E1E1E6;
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    a span {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        color: #E1E1E6;
+    }
 
     thead {
         background-color: var(--azulescuro);
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
         
     }
     
-    th {
-       
-        color: var(--cinza);
-        font-size: 2rem;
-        line-height: 160%;
-        font-weight: normal;
-        padding: 4rem;
-
-
-    }
-
     table td {
         text-align: center;
        height: 7rem;
@@ -142,7 +186,7 @@ input {
         font-style: normal;
         font-weight: 700;
         padding: 1.5rem;
-       
+
     }
     
     .remover button {
@@ -165,17 +209,24 @@ input {
     }
     
     table th:first-child {
-        border-top-left-radius: 1rem;
+        border-top-left-radius: 10px;
     }
     table th:last-child {
-        border-top-right-radius: 1rem;
+        border-top-right-radius: 10px;
     }
-    .remover {
-        color: var(--red);
-    }
+         
     tr:nth-child(even) {
-        background-color: var(--seach);
-    }
+            background-color: var(--seach);
+            border-top: 1px solid #4A808C;
+            border-bottom: 1px solid #4A808C;
+    
+        }
+
+
+
+
+
+
 
 
 
@@ -184,78 +235,80 @@ input {
 /************* POSICOES DA TABELA ***********/
 
 .Usuário {
+    font-size: 1.8rem;
+    font-weight: 900;
     width: 38rem;
-    padding-left: 2rem;
-
+    padding-left: 3rem;
 }
 .Repositories, .Followers, .Ação {
+    font-weight: 900;
+
+    padding-left: 6.8rem;
+    font-size: 1.8rem;
     width: 10rem;
     height: 7rem;
     text-align: center;
 }
+td.user {
+    width: 1350px;
+}
+td.remover {
+    width: 700px;
+}
+td.seguidores {
+    width: 200px;
+}
+td.repositores
+
+tbody td.repo {
+    position: absolute;
+    padding-left: 12rem;
+    margin-left: 10rem;
+}
+
+td {
+
+    width: 100%;
+    padding-left: 2rem;
+}
+
+tbody tr {
 
 
+    display: flex;
+    text-align: start;
+    align-items: center;
+   
+}
 
-
-
-
-td.user { 
-    position: relative;  
+table tbody {
+    display: flex;
     flex-direction: column;
+    max-height: 45.8rem;
+    overflow: auto; 
+    overflow: overlay; 
+}
+
+
+table tbody tr td:first-child {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.6rem;
 }
 
-td.user img {
-    bottom: 1rem;
-    left: 15px;
-    position: absolute;
-}
-
-td.user p {
-   position: absolute;
- 
-    left: 90px;
-
-}
-td.user span {
-    position: absolute;
- 
-    left: 90px;
-    bottom: 18px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    line-height: 160%;
-}
 .user img {
-    width: 5rem;
-    height: 5rem;
+    height: 5.6rem;
+    width: 5.6rem;
     object-fit: cover;
     border-radius: 50%;
 }
 
-
-
-
-/* CHÁ DE SUMIÇO*/
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    white-space: nowrap;
-    border-width: 0;
-}
-
-
-.hide {
+.none {
     display: none;
 }
+
+
+
 
 
 
