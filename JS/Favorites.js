@@ -132,11 +132,11 @@ export class FavoritesView extends Favorites {
           row.querySelector('.seguidores').textContent = user.followers
 
           row.querySelector('.remover').onclick = () => {
-           const isok = confirm('Tem certeza que deseja deletar essa linha?')
+         
 
-           if(isok) {
+  
               this.delete(user)
-           }
+   
           }
 
 
