@@ -1,5 +1,7 @@
 # Github-Favorits
 
+![andrewhenrique2 github io_Github-Favorits_](https://github.com/andrewhenrique2/Github-Favorits/assets/103382295/76daab99-91fa-4410-9711-09a5a13a7f96)
+
 Este site possui a função de adicionar ou remover os favoritos do github.
 <br>
 Possui o número de repositorios e o número de seguidores.
